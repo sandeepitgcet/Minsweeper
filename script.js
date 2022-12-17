@@ -2,6 +2,7 @@ let n=10;
 let arr = Array(n);
 let level=1;
 const gameBoard=document.querySelector("body");
+let set=[];
 play();
 function play(){
     if(level==1){
@@ -14,7 +15,7 @@ function play(){
     for (var i = 0; i < n; i++) {
         arr[i] = Array(n).fill(0);
     }
-    let set=new Set();
+    set=new Set();
     for(let i=0;i<n;i++){
         let row=parseInt(Math.random()*10);
         let col=parseInt(Math.random()*10);
@@ -110,6 +111,12 @@ function callBack(event){
         let img=document.createElement("img");
         img.src="./bomb.png";
         event.target.appendChild(img);
+        let itr=set.entries();
+        // for(let i in itr){
+        //     let row=i[0];
+        //     let col=i[1];
+
+        // }
     }else if(arr[r][c]!=0){
         event.target.innerHTML=arr[r][c];
     }else{
