@@ -5,15 +5,19 @@
     background-color: antiquewhite;
 }
 
-body{
+.mainbody{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    
+    
 }
 
 .game{
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 
